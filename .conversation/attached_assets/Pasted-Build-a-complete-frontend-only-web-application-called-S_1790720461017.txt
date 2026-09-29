@@ -1,0 +1,350 @@
+Build a complete frontend-only web application called STUDY DESK.
+
+PROJECT IDEA
+
+STUDY DESK is a minimal, calming digital study desk designed to help students focus, start study sessions, take short breaks, and track their daily progress.
+
+The application should feel like opening a clean virtual study desk rather than using a complicated productivity dashboard.
+
+IMPORTANT TECH REQUIREMENTS
+
+Use ONLY:
+
+- HTML
+- CSS
+- JavaScript
+
+You may use React ONLY if needed for the UI.
+
+Do NOT use:
+
+- Backend
+- Firebase
+- Database
+- Node.js server
+- Express
+- Python
+- Authentication
+- APIs
+- External AI services
+
+The project must work completely in the browser.
+
+Use localStorage for saving simple user preferences, tasks, and progress.
+
+Keep the code clean, modular, readable, and easy to edit.
+
+DESIGN STYLE
+
+Create a premium, minimal, calm study environment.
+
+Visual direction:
+
+- Clean white / warm off-white background
+- Soft grey surfaces
+- Subtle blue accents
+- Very light shadows
+- Rounded cards
+- Glass-like elements where appropriate
+- Excellent spacing
+- Modern typography
+- Minimal animations
+- No purple
+- No excessive gradients
+- No unnecessary visual clutter
+
+The interface should feel inspired by a premium productivity app.
+
+Make it fully responsive for:
+
+- Desktop
+- Tablet
+- Mobile
+
+Do not make the interface look like a generic admin dashboard.
+
+MAIN SCREEN
+
+The homepage should be the student's virtual study desk.
+
+Header:
+
+- STUDY DESK logo/name
+- Small motivational text
+- Settings button
+
+Main layout:
+
+1. FOCUS TIMER
+
+Make the timer the main visual element.
+
+Display:
+
+FOCUS
+25:00
+
+Buttons:
+
+- Start
+- Pause
+- Reset
+
+Timer modes:
+
+- Focus
+- Short Break
+- Long Break
+
+Default:
+Focus = 25 minutes
+Short Break = 5 minutes
+Long Break = 15 minutes
+
+When the timer reaches 00:00:
+
+- Play a subtle notification sound if available
+- Show a small completion message
+- Automatically switch to the appropriate break/focus mode
+- Update the session counter
+
+Allow users to customize:
+
+- Focus duration
+- Short break duration
+- Long break duration
+
+Add a circular progress indicator around the timer.
+
+The timer must continue correctly even if the user switches browser tabs.
+
+2. QUICK START
+
+Add three large buttons:
+
+"Start Focus"
+"Take 5 Min Break"
+"Take 15 Min Break"
+
+Clicking them should immediately start the selected timer.
+
+3. TODAY'S TASKS
+
+Create a simple task list.
+
+Users can:
+
+- Add a task
+- Mark task as completed
+- Delete task
+
+Example empty state:
+
+"Nothing here yet.
+Add something you want to finish today."
+
+Do NOT include fake/demo tasks when the application first loads.
+
+Tasks must persist using localStorage.
+
+Show:
+
+Today's Tasks
+0 completed
+
+4. STUDY SESSIONS
+
+Display a small progress card:
+
+TODAY
+Focus Sessions: 0
+Focus Time: 0 min
+Tasks Completed: 0
+
+Add a simple visual progress indicator.
+
+The numbers should update automatically.
+
+5. STUDY DESK ATMOSPHERE
+
+Add a small optional section that makes the application feel like a real desk.
+
+Include simple controls such as:
+
+☕ Coffee
+🌧️ Rain
+📚 Library
+🌙 Night
+
+These should change the visual atmosphere/background subtly.
+
+Do not require external audio APIs.
+
+If audio cannot be implemented without external files, create the atmosphere visually instead.
+
+6. MOTIVATION
+
+Display a short rotating motivational message.
+
+Examples:
+
+"One focused hour can change your entire day."
+
+"Start small. Stay consistent."
+
+"Your future self will thank you."
+
+"Just focus on the next 25 minutes."
+
+Keep the messages short and tasteful.
+
+Do not overuse motivational text.
+
+7. DAILY PROGRESS
+
+Create a simple 7-day visual tracker.
+
+Example:
+
+MON  ●
+TUE  ●
+WED  ●
+THU  ●
+FRI  ●
+SAT  ●
+SUN  ●
+
+A day should become active when the user completes at least one focus session.
+
+Store the data locally.
+
+TIMER BEHAVIOR
+
+Implement the timer carefully.
+
+Requirements:
+
+- Accurate countdown
+- Start
+- Pause
+- Resume
+- Reset
+- Mode switching
+- Session completion tracking
+- Browser tab switching must not make the timer inaccurate
+- Prevent multiple timer intervals from running simultaneously
+- Timer state should survive accidental page refresh when practical
+- Use timestamps rather than relying only on setInterval counting
+
+When a focus session finishes:
+
+- Increase completed focus sessions
+- Add the focus duration to today's focus time
+- Mark today as active in the weekly tracker
+- Switch to Short Break
+
+When a break finishes:
+
+- Switch back to Focus
+
+Long Break can be manually selected.
+
+SETTINGS
+
+Create a simple settings panel/modal.
+
+Options:
+
+- Focus duration
+- Short break duration
+- Long break duration
+- Sound on/off
+- 24-hour / 12-hour clock if a clock is included
+- Reset all local data
+
+Include a confirmation before deleting all data.
+
+EMPTY STATE
+
+The first time the application opens, it should be completely clean.
+
+NO:
+
+- Alex Morgan
+- Example tasks
+- Demo projects
+- Fake statistics
+- Fake progress
+- Placeholder user data
+
+Start with:
+
+Focus Sessions: 0
+Focus Time: 0 min
+Tasks Completed: 0
+
+MICRO INTERACTIONS
+
+Add subtle animations:
+
+- Timer progress animation
+- Button hover
+- Task completion animation
+- Modal opening
+- Mode switching
+- Small completion notification
+
+Keep animations fast and elegant.
+
+Do not make everything bounce around like a children's educational website from 2007.
+
+ACCESSIBILITY
+
+Include:
+
+- Proper button labels
+- Keyboard-friendly controls
+- Good color contrast
+- Visible focus states
+- Responsive touch targets
+- Semantic HTML where possible
+
+PROJECT STRUCTURE
+
+Keep the project organized.
+
+Example:
+
+/index.html
+/style.css
+/script.js
+/assets/
+
+If React is used, keep the structure simple and do not introduce unnecessary frameworks or libraries.
+
+FINAL REQUIREMENTS
+
+Before finishing:
+
+1. Make sure the application runs without errors.
+2. Test Start/Pause/Resume/Reset.
+3. Test switching between Focus and Break.
+4. Test timer accuracy after switching browser tabs.
+5. Test task creation/completion/deletion.
+6. Test localStorage persistence.
+7. Test daily session tracking.
+8. Test mobile responsiveness.
+9. Make sure there is NO demo data.
+10. Make sure there are no broken buttons.
+11. Make sure there are no console errors.
+12. Make sure the project can be downloaded as a complete ZIP.
+
+The final result should feel like a polished, simple product called:
+
+STUDY DESK
+
+Tagline:
+
+FOCUS. STUDY. REPEAT.
+
+Keep the experience intentionally simple. The timer and study flow are the heart of the application. Do not turn it into an oversized productivity suite.

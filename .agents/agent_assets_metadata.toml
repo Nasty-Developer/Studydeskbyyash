@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "_pK50_IIQjtNWtSHG1ED6"
+uri = "file://deliverables/STUDY-DESK-complete.zip"
+type = "unspecified"
+title = "STUDY DESK — Complete ZIP"
+description = "Updated blue-theme source files and production-ready static build."
+logical_id = "1cfd5ac2-76b8-4085-b04e-7385da1a0564"
+content_hash = "sha256:9fa3710d8947421bcf29e6317e6e7180646d6aab57cb2e507f4c8cd7741a55e8"
+size = 301423
+mtime_ms = 1790721488254
+storage_uri = "gcs://replit-rams-assets-pike/rams/assets/repl:1d311953-7f78-41f8-ba79-c9b4fed7e4f3/1cfd5ac2-76b8-4085-b04e-7385da1a0564/5e290b90-0265-4898-be0a-3c7b740e6e34"
+storage_version_token = "1790721498237496"
+content_type = "application/octet-stream"

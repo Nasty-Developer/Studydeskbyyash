@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "STUDY DESK"
+description = "A calm, browser-only study space for focused timer sessions, short breaks, daily tasks, and local progress tracking."
+version = "1.0.0"
+id = "artifacts/study-desk"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19610
+
+[services.development]
+run = "pnpm --filter @workspace/study-desk run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/study-desk", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/study-desk/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19610"
+BASE_PATH = "/"
